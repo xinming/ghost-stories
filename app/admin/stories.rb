@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register Story do
   form do |f|
     f.inputs do

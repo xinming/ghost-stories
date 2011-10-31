@@ -14,6 +14,8 @@ STOP_SERVER = "passenger stop -p #{PORT}"
 START_SERVER = "passenger start -p #{PORT} -e #{RAILS_ENV} -d"
 GIT_BRANCH = "master"
 
+puts `git push origin master`
+
 Net::SSH.start( HOST, USER, :password => PASS ) do |ssh|
   commands = <<-eos
     cd #{DIRECTORY}

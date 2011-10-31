@@ -16,8 +16,9 @@ gem "activeadmin", "~> 0.3.2"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 # end
-
 gem 'jquery-rails'
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.8'
 
 # Use unicorn as the web server
 # gem 'unicorn'

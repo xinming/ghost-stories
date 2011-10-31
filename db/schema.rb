@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111031181307) do
+ActiveRecord::Schema.define(:version => 20111031181308) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -54,12 +53,13 @@ ActiveRecord::Schema.define(:version => 20111031181307) do
 
   create_table "stories", :force => true do |t|
     t.string   "name"
-    t.text     "source"
+    t.string   "source"
     t.text     "story"
     t.string   "writer"
     t.integer  "genre_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_uid"
   end
 
 end

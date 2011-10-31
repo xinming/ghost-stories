@@ -10,4 +10,11 @@ ActiveAdmin.register Story do
     end
     
   end
+  
+  index do 
+    column :name
+    column :genre
+    column :writer
+    default_actions
+  end
 end

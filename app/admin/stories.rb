@@ -16,7 +16,7 @@ ActiveAdmin.register Story do
   
   index do 
     column("image") do |s|
-      image_tag s.image.thumb('120x120').url
+      image_tag s.image.thumb('120x120').url if s.image
     end    
     column :name
     column :writer

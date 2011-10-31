@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  source: MyString
+  story: MyText
+  genre_id: 1
+
+two:
+  name: MyString
+  source: MyString
+  story: MyText
+  genre_id: 1

@@ -20,8 +20,8 @@ Net::SSH.start( HOST, USER, :password => PASS ) do |ssh|
     pwd
     git pull origin #{GIT_BRANCH}
     #{RVM_INIT}
-    bundle install
-    bundle exec 'rake db:migrate RAILS_ENV=#{RAILS_ENV}'
+    # bundle install
+    # bundle exec 'rake db:migrate RAILS_ENV=#{RAILS_ENV}'
     #{STOP_SERVER}
     #{START_SERVER}
   eos

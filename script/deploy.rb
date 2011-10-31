@@ -9,7 +9,7 @@ PASS = 'hacker'
 DIRECTORY = "~/domains/ghost/ghost-stories"
 RAILS_ENV = "production"
 PORT = 16000
-RVM_INIT = "source /etc/profile; rvm use ruby-1.9.2-p290@ghost"
+INIT_RVM = "source /etc/profile; rvm use ruby-1.9.2-p290@ghost"
 STOP_SERVER = "passenger stop -p #{PORT}"
 START_SERVER = "passenger start -p #{PORT} -e #{RAILS_ENV} -d"
 GIT_BRANCH = "master"
@@ -19,9 +19,9 @@ Net::SSH.start( HOST, USER, :password => PASS ) do |ssh|
     cd #{DIRECTORY}
     pwd
     git pull origin #{GIT_BRANCH}
-    #{RVM_INIT}
+    #{INIT_RVM}
     bundle install --path vendor/bundle
-    # bundle exec 'rake db:migrate RAILS_ENV=#{RAILS_ENV}'
+    bundle exec 'rake db:migrate RAILS_ENV=#{RAILS_ENV}'
     #{STOP_SERVER}
     #{START_SERVER}
   eos

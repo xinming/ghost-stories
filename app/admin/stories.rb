@@ -8,7 +8,7 @@ ActiveAdmin.register Story do
       f.input :writer, :label => "นักเขียน"
       f.input :story
     end
-    
+    f.buttons
   end
   
   index do 

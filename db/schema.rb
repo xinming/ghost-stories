@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20111031181307) do
 
   create_table "stories", :force => true do |t|
     t.string   "name"
-    t.string   "source"
+    t.text     "source"
     t.text     "story"
     t.string   "writer"
     t.integer  "genre_id"

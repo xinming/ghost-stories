@@ -20,6 +20,9 @@ gem 'jquery-rails'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.8'
 gem 'rabl'
+gem 'kaminari'
+gem 'has_scope'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
